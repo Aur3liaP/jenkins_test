@@ -46,11 +46,14 @@ pipeline {
                 echo "va sur ... : ${url_api}"
             }
         }
+        // Commenté pour les tests
+        /*
         stage("approbation") {
             steps {
                 input message: "continuer?", ok: 'Oui'
             }
         }
+        */
         stage("parallel_test") {
             parallel {
                 stage("trycatch") {
